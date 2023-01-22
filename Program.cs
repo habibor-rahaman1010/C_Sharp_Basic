@@ -14,7 +14,11 @@ namespace MainProgram
 
 
             List<object> carList = new List<object>() { car1, car2, car3, car4, car5 };
-            carList.Add(new Car<object>("BMW Seven Series", "BMW", "Balck", 6, 220, 600, 12000, "Sports", 21000000));
+
+            foreach (Car<object> item in carList)
+            {
+                item.PrintInfo<object>(item);
+            }
         }
     }
 }
