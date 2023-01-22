@@ -1,21 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using CreateNewCar;
+
 namespace MainProgram
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<string> name = new List<string>() { "Bill gates", "Microsoft" };
-            name.Add("Habibor Rahaman");
-            name.Add("Tamim Sahriar Subeen");
-            name.Add("Tamid Rafi");
-            name.Add("Tamid Rafi");
-            name.Add("Tamid Rafi");
-
-            for (int i = 0; i < name.Count; i++)
-            {
-                Console.WriteLine(name[i]);
-            }
+            Car<object> car1 = new Car<object>("BMW Seven Series", "BMW", "Balck", 6, 220, 600, 1200, "Sports", 2000000);
         }
     }
 }
