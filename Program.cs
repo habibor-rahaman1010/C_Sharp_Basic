@@ -1,5 +1,7 @@
 ﻿using CreateNewCar;
 using CretaePassport;
+using Result;
+
 
 namespace MainProgram
 {
@@ -74,7 +76,20 @@ namespace MainProgram
             {
                 item.PrintInfo<object>(item);
             }
+            
+            StudentNumber ara = new StudentNumber();            
+            int[] arr =  ara.studentResult();
+            int[] arr2 =  ara.age();
+            string[] name = ara.getNames();
 
+            List<int[]> data = new List<int[]>(){arr, arr2};
+            foreach (int[] item in data)
+            {
+                for(int i = 0; i < item.Length; i++){
+                    Console.WriteLine(item[i]);
+                }
+                Console.WriteLine("\n");
+            }
         }
     }
 }
